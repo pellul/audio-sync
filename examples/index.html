@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Audio sync - Example</title>
+</head>
+<body>
+  <div class="container">
+    <article>
+      <p>Player 1 - Two example</p>
+      <span id="track1-A" class="player-controller"></span>
+      <span id="track1-B" class="player-controller"></span>
+    </article>
+
+    <article>
+      <p>Player 2 - Three tracks</p>
+      <span id="track2-A" class="player-controller"></span>
+      <span id="track2-B" class="player-controller"></span>
+      <span id="track2-C" class="player-controller"></span>
+    </article>
+
+    <article>
+      <p>Player 3 - Failing</p>
+      <span id="track3-A" class="player-controller"></span>
+      <span id="track3-B" class="player-controller"></span>
+    </article>
+  </div>
+
+  <script src="../dist/index.js"></script>
+  <script>
+    window.onload = function() {
+      audioSync([
+        ['https://upload.wikimedia.org/wikipedia/commons/3/3c/01_-_Vivaldi_Spring_mvt_1_Allegro_-_John_Harrison_violin.ogg', 'track1-A'],
+        ['https://upload.wikimedia.org/wikipedia/commons/3/3c/01_-_Vivaldi_Spring_mvt_1_Allegro_-_John_Harrison_violin.ogg', 'track1-B']
+      ]);
+
+      audioSync([
+        ['https://upload.wikimedia.org/wikipedia/commons/5/5d/Giorgi_Latsabidze_Plays_Mazurka.ogg', 'track2-A'],
+        ['https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg', 'track2-B'],
+        ['https://upload.wikimedia.org/wikipedia/commons/6/67/Frederic_Chopin_-_Opus_10_-_Twelve_Grand_Etudes_-_c_minor.ogg', 'track2-C']
+      ]);
+
+      audioSync([
+        ['wrong link', 'track3-A'],
+        ['oh no...', 'track3-B']
+      ]);
+    };
+  </script>
+  <style>
+    body {
+      background: #8d958d;
+    }
+
+    .container {
+      width: 500px;
+      margin: auto;
+    }
+
+    .player-controller {
+      display: inline-block;
+      position: relative;
+      padding: 3em;
+      margin-left: .5em;
+      border: .5rem solid #C4E5D4;
+      color: #C4E5D4;
+      background: #232323;
+    }
+
+    .player-controller::before {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+    }
+
+    .loading::before {
+      content: '...';
+    }
+
+    .failed::before {
+      content: '×';
+    }
+
+    .paused::before {
+      content: '▶';
+    }
+
+    .playing::before {
+      content: '⏸';
+    }
+
+    .playing {
+      animation: play 5s infinite ease-in-out;
+    }
+
+    @keyframes play {
+      50% {
+        border-color: #232323;
+      }
+    }
+
+  </style>
+</body>
+</html>

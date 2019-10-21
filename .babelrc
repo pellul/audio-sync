@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env", {
+        "modules": "umd",
+        "useBuiltIns": "usage",
+        "targets": {
+          "browsers": [
+            "ie 6",
+          ]
+        }
+      }
+    ]
+  ]
+}

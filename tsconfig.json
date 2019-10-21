@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2016",
+    "alwaysStrict": true,
+    "declaration": true,
+    "removeComments": true,
+    "outDir": "./dist",
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
