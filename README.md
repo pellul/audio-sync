@@ -2,14 +2,14 @@
 
 An audio player allowing you switch tracks keeping the same timestamp.
 
-[Download](https://github.com/pellul/audio-sync/archive/master.zip)
-🔀
-[Example](https://pellul.github.io/audio-sync/examples/)
+- [Download](https://github.com/pellul/audio-sync/archive/master.zip)
+- [Use CDN](https://cdn.jsdelivr.net/npm/audio-sync)
+- [See example](https://pellul.github.io/audio-sync/examples/)
 
 ## Usage
 
 ```html
-<script src="syncaudio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/audio-sync"></script>
 <script>
   audioSync([
     ['file-a.mp3', 'track1-A'],

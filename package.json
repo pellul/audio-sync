@@ -1,6 +1,6 @@
 {
   "name": "audio-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An audio player that keeps multiple tracks synchronized.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

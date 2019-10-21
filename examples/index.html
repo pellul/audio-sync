@@ -76,7 +76,8 @@
     }
 
     .loading::before {
-      content: '...';
+      content: '🗘';
+      animation: load 1.2s infinite cubic-bezier(.79,.14,.15,.86);
     }
 
     .failed::before {
@@ -98,6 +99,12 @@
     @keyframes play {
       50% {
         border-color: #232323;
+      }
+    }
+
+    @keyframes load {
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
       }
     }
 
