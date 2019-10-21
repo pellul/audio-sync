@@ -2,9 +2,9 @@
 
 An audio player allowing you switch tracks keeping the same timestamp.
 
-[Download](https://raw.githubusercontent.com/pellul/audio-sync/dist/index.js)
+[Download](https://github.com/pellul/audio-sync/archive/master.zip)
 🔀
-[Example](https://github.com/pellul/audio-sync/examples/index.html)
+[Example](https://pellul.github.io/audio-sync/examples/)
 
 ## Usage
 
